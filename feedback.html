@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <link rel="stylesheet" type="text/css" href="style2.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      if (validateForm()) {
+        alert('Your form is successfully submitted. Thank you! \n A Gift is Waiting for you🎁');
+        window.location.href = 'Gifts/gifts.html'; // Add this line to redirect to gift.html
+      }
+    });
+  
+    function validateForm() {
+      var fname = document.getElementById('fname').value;
+      var lname = document.getElementById('lname').value;
+      var address = document.getElementById('address').value;
+      var phone = document.getElementById('phone').value;
+      var email = document.getElementById('email').value;
+      var comments = document.getElementById('comments').value;
+
+      if (fname === '' || lname === '' || address === '' || phone === '' || email === '') {
+        alert('All fields are required');
+        return false;
+      }
+
+      var nameRegex = /^[a-zA-Z]+$/;
+      if (!nameRegex.test(fname)) {
+        alert('First name should only contain letters');
+        return false;
+      }
+
+      if (!nameRegex.test(lname)) {
+        alert('Last name should only contain letters');
+        return false;
+      }
+
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Invalid email address');
+        return false;
+      }
+
+      var phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Invalid phone number');
+        return false;
+      }
+
+      return true;
+    }
+  });
+</script>
+
+</head>
+
+
+
+
+<body style="background-image: url(BGImg/7.jpeg);">
+
+<div class="main">
+  <br><br>
+<div class="navbar">
+
+
+  <img src="Designer1.png"  class="logo">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>  
+      <li><a href="feedback.html">Feedback</a></li>
+      
+    </ul>
+  </nav>  
+</div>
+<h1 style="text-align: center;  font-family: cursive; color: #9e3517;">Feedback Form</h1><br><br>
+  
+
+<form >
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" required>
+
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" required>
+
+  <label for="address">Address</label>
+  <textarea id="address" name="address" required></textarea>
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" required>
+  
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="comments">Comments</label>
+  <textarea id="comments" name="comments"></textarea>
+
+  <input type="submit" value="Submit">
+</form>
+
+<br><br>
+
+</body>
+</html>
+

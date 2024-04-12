@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.main{ width: 100%; background-image: url(BGImg/7.jpeg); background-position:
+ center; background-size: cover; height: 100vh; position: relative;
+ font-family: cursive; }
+.navbar{
+  width: 86%;
+  display: inline-flex;
+  margin: auto;
+  padding: 1% 0;
+  align-items:center;
+  justify-content:space-between;
+}
+.navbar .logo{
+  width: 10%;
+  cursor: pointer;
+  margin-top: -5%;
+  margin-left: 4%;
+  border-radius: 25%;
+}
+ul{
+  margin-top: -5%;
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 30px 16px;
+}
+ul li a{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  margin: 3%;
+  transition: .4s ease;
+}
+ul li a:hover{
+  color: darkred;
+}
+.info{
+    margin-left: 7%;
+    margin-top: 8%;
+}
+
+.info h1{
+    font-size: 65px;
+    color: rgb(36,32,30);
+}
+
+.info h3{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.info span{
+    color: green;
+}
+
+.info a{
+    text-decoration:  none;
+    color: #fff;
+    background: rgb(36,32,30);
+    margin: 26px 0;
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: .4s ease;
+}
+
+.info a:hover{
+    background: deeppink;
+}
+
+.image{
+    width: 30vh;
+    height: 40vh;
+    position: absolute;
+    right: 10vh;
+    display: block;
+    bottom: 15vh;
+}
+
+.image img{
+    position: absolute;
+    height: 140%;
+    left: 40%;
+        display: block;
+    transform: translate(-55%);
+    bottom: 0;
+    transition: left 2s ease;
+}
+
+.image:hover .vipul{
+    left: 55%;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #000;
+}
+
+.icons ion-icon{
+    margin-left: 7%;
+    color: #000;
+    margin-right: -6vh;
+    font-size: 5vh;
+    transition: .4s ease;
+    
+}
+
+.icons ion-icon:hover{
+    color: deeppink;
+}
